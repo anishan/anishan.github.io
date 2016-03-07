@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+/*colors:
+    light blue: 39A5B7
+    dark blue: 2a7a89
+    light brown: b75838
+    dark brown: 753824
+    yellow: e6a800
+    */
+
+.nav ul {
+    font-family: "Raleway", "Century Gothic", sans-serif;
+    font-size: 1.5em;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+    padding: 0 10px;
+    color:#2a7a89;
+}
+
+h1 {
+	font-family: "Raleway", "Century Gothic", sans-serif;
+	font-size: 2.5em; /*relative size, allows resizing in browser*/
+	margin: 5px 0;
+    color:#39A5B7;
+}
+
+h2 {
+	font-family: "Raleway", "Century Gothic", sans-serif;
+	font-size: 1.5em; /*relative size, allows resizing in browser*/
+	margin: 15px 5px 0 0;
+    color:#b75838;
+}
+
+h3 {
+	font-family: "Raleway", "Century Gothic", sans-serif;
+	font-size: 1.25em; /*relative size, allows resizing in browser*/
+	margin: 5px 0;
+    color:#b75838;
+}
+
+p {
+	font-family: "Raleway", "Century Gothic", sans-serif;
+	font-size: 1.2em; /*relative size, allows resizing in browser*/
+	margin: 5px 0;
+    color:#753824;
+}
+
+#about p {
+	font-family: "Raleway", "Century Gothic", sans-serif;
+	font-size: 1.5em; /*relative size, allows resizing in browser*/
+	margin: 5px 0;
+    color:#753824;
+}
+
+.main-body a:link, .main-body a:visited {
+	color:#b75838;
+	text-decoration: none;
+}
+
+.main-body a:hover, .main-body a:active {
+    color: #e6a800;
+}
+
+a.collab:hover,  a.collab:active {
+    color: #753824;
+}
+
+.nav a:link, .nav a:visited {
+	color:#2a7a89;
+	text-decoration: none;
+}
+
+.nav a:hover, .nav a:active {
+    color: #39A5B7;
+}
+
+#selected a:link, #selected a:visited {
+	color:#39A5B7;
+	text-decoration: none;
+}
+
+.title h2:hover, .title h2:active {
+    color: #e6a800;
+}
+
+header {
+	margin: 25px;
+	text-align: left;
+}
+
+section {
+	margin: 25px;
+	text-align: left;
+}
+
+.description {
+    padding: 0 30px 0 30px;
+}
+
+.links {
+    padding: 0 30px 15px 30px;
+}
+
+/*footer {*/
+	/* Align */
+	/*margin: 0; /*cushion on all sides*/
+	/*border: 0; /*1px solid black; /*no border*/
+	/*text-align: center;*/
+
+	/* Push footer to bottom */
+	/*width: 100%;*/
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	/*left: 0;*/
+/*}*/
+
+/*.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}*/
