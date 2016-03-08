@@ -8,6 +8,8 @@
     yellow: e6a800
     */
 
+
+
 .nav ul {
     font-family: "Raleway", "Century Gothic", sans-serif;
     font-size: 1.5em;
@@ -20,6 +22,21 @@
 .nav li {
 	display: inline;
     padding: 0 10px;
+    color:#2a7a89;
+}
+
+.footer ul {
+    font-family: "Raleway", "Century Gothic", sans-serif;
+    font-size: 1em;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+	text-align: center;
+}
+
+.footer li {
+	/*display: inline;*/
+    /*padding: 0 5px;*/
     color:#2a7a89;
 }
 
@@ -71,12 +88,12 @@ a.collab:hover,  a.collab:active {
     color: #753824;
 }
 
-.nav a:link, .nav a:visited {
+.nav a:link, .nav a:visited, .footer a:link, .footer a:visited {
 	color:#2a7a89;
 	text-decoration: none;
 }
 
-.nav a:hover, .nav a:active {
+.nav a:hover, .nav a:active, .footer a:hover, .footer a:active {
     color: #39A5B7;
 }
 
@@ -99,7 +116,7 @@ section {
 	text-align: left;
 }
 
-.description {
+.description, .skills {
     padding: 0 30px 0 30px;
 }
 
@@ -107,25 +124,34 @@ section {
     padding: 0 30px 15px 30px;
 }
 
-/*footer {*/
-	/* Align */
-	/*margin: 0; /*cushion on all sides*/
-	/*border: 0; /*1px solid black; /*no border*/
-	/*text-align: center;*/
+/*For footer at bottom of page, some code from http://codepen.io/cbracco/pen/zekgx */
 
-	/* Push footer to bottom */
-	/*width: 100%;*/
-	/*position: absolute;*/
-	/*bottom: 0;*/
-	/*left: 0;*/
-/*}*/
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 
-/*.footer {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6em;
+  min-height: 100%;
+}
+
+.footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
-  background-color: #efefef;
+  padding: 0;
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: #2a7a89;
   text-align: center;
-}*/
+}

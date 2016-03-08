@@ -50,12 +50,14 @@ function fillPortfolio(data)
     // When the title is clicked, toggle the question
     titleDiv.onclick = function () {
       var text = this.parentElement.getElementsByClassName("description")[0]
+      var skills = this.parentElement.getElementsByClassName("skills")[0]
       var image = this.parentElement.getElementsByClassName("image")[0]
       var links = this.parentElement.getElementsByClassName("links")[0]
       string = this.childNodes[0].innerHTML
       if (text.style.display != 'none')
       {
         text.style.display = 'none'
+        skills.style.display = 'none'
         image.style.display = 'none'
         links.style.display = 'none'
         // And change the symbol in front of  the title
@@ -64,6 +66,7 @@ function fillPortfolio(data)
       else
       {
         text.style.display = ''
+        skills.style.display = ''
         image.style.display = ''
         links.style.display = ''
         // Change the symbol in front of the title
@@ -93,6 +96,32 @@ function fillPortfolio(data)
     description.appendChild(descriptionText);
     // hide the description to start with
     descriptionDiv.style.display = 'none'
+
+    // Skills
+    var skillsList = GLOBAL.projects[i]["Skills"]
+    var date = GLOBAL.projects[i]["Date"]
+    var skillsDiv = document.createElement("div")
+    skillsDiv.className = "skills"
+    projectItem.appendChild(skillsDiv)
+    // p type
+    if (date != '')
+    {
+        var dateField = document.createElement("p")
+        skillsDiv.appendChild(dateField)
+        // Actual text
+        var dateText = document.createTextNode(date)
+        dateField.appendChild(dateText);
+    }
+    if (skillsList != '')
+    {
+        var skills = document.createElement("p")
+        skillsDiv.appendChild(skills)
+        // Actual text
+        var skillsText = document.createTextNode("Skills: " + skillsList)
+        skills.appendChild(skillsText);
+    }
+    // hide the description to start with
+    skillsDiv.style.display = 'none'
 
     // Website
     // Wrapper div
@@ -144,6 +173,7 @@ function fillPortfolio(data)
 
     // Create and add the image to the div
     // Wrapper div
+
     var imageDiv = document.createElement("div")
     imageDiv.className = "image"
     projectItem.appendChild(imageDiv)
@@ -151,12 +181,15 @@ function fillPortfolio(data)
     var center = document.createElement("center")
     imageDiv.appendChild(center)
     // image
-    var image = document.createElement("img")
-    var imageFilename = "images/" + GLOBAL.projects[i]["Photo"]
-    image.src = imageFilename
-    image.setAttribute('height', '400px');
-    image.style.margin = "0 auto";
-    center.appendChild(image)
+    if (GLOBAL.projects[i]["Photo"] != '')
+    {
+        var image = document.createElement("img")
+        var imageFilename = "images/" + GLOBAL.projects[i]["Photo"]
+        image.src = imageFilename
+        image.setAttribute('height', '400px');
+        image.style.margin = "0 auto";
+        center.appendChild(image)
+    }
     // hide the description to start with
     imageDiv.style.display = 'none'
   }
