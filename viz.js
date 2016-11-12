@@ -1,7 +1,11 @@
 var length = 200;
 var width = 500;
-var side = 300;
-function run()
+var side = 200;
+
+// window.addEventListener('load', runTriangles());
+// for some reason this only works through the body onload function
+// it has something to do with the svg id instead of div
+function runTriangles()
 {
     // drawTriangle(400, 0, 0, 500, 800, 500)
     // drawTriangle(200, 200, 50, 500, 800, 400)
@@ -10,21 +14,26 @@ function run()
     drawTriangle(side/2, 0, 0, side*0.8, side, side*0.8)
     drawTriangle2(side, side*0.8, side/2, 0, 3*side/2, 0)
     drawTriangle(3*side/2, 0, side, side*0.8, 2*side, side*0.8)
+    // drawTriangle2(2*side, side*0.8, 3*side/2, 0, 5*side/2, 0)
+    // drawTriangle(5*side/2, 0, 2*side, side*0.8, 3*side, side*0.8)
     exploreText()
     // drawTriangle(2*side, side*0.8, 3*side/2, 0, 5*side/2, 0)
 
     // drawTriangle(0, side/2, side*0.8, 0, side*0.8, side)
+
 }
 // makeTriangles()
 
 function drawTriangle(topx, topy, leftx, lefty, rightx, righty)
 {
     var svg = d3.select("body").select("#main");
+    // var svg = document.getElementById("triangles");
     // var path_string = "M 10,25 L 10,75 L 60,75 L 10,25";
     var path_string  = "M" + topx + "," + topy + " "
                       +"L" + leftx + "," + lefty + " "
                       +"L" + rightx + "," + righty + " "
                       + "Z";
+
     svg.append("path")
         .attr("d", path_string)
         .attr("stroke", "#2a7a89")
@@ -75,7 +84,9 @@ function drawTriangle2(topx, topy, leftx, lefty, rightx, righty)
 
 function exploreText()
 {
+  console.log("in text");
     var svg = d3.select("body").select("#main");
+    console.log(svg);
     svg.append("text")
         .attr("text", "Explore")
         .attr("font-family", "sans-serif")

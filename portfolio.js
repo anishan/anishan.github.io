@@ -1,7 +1,9 @@
 var GLOBAL = { projects: [],
                projectsFileName: "content/projects.csv"};
 
-function run()
+window.addEventListener('load', runPortfolio());
+
+function runPortfolio()
 {
   update_projects();
 }
