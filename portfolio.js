@@ -45,51 +45,31 @@ function fillPortfolio(data)
     projectElement.appendChild(projectItem)
     projectItem.className = "project_item"
 
+    
+
     // Create and add the title to the div, as a H3 level
     // Wrapper div
     var titleDiv = document.createElement("div")
     titleDiv.className = "title"
-    // When the title is clicked, toggle the question
-    titleDiv.onclick = function () {
-      var text = this.parentElement.getElementsByClassName("description")[0]
-      var skills = this.parentElement.getElementsByClassName("skills")[0]
-      var image = this.parentElement.getElementsByClassName("image")[0]
-      var links = this.parentElement.getElementsByClassName("links")[0]
-      string = this.childNodes[0].innerHTML
-      if (text.style.display != 'none')
-      {
-        text.style.display = 'none'
-        skills.style.display = 'none'
-        image.style.display = 'none'
-        links.style.display = 'none'
-        // And change the symbol in front of  the title
-        this.childNodes[0].innerHTML = "\u25b8" + string.substr(1, string.length)
-      }
-      else
-      {
-        text.style.display = ''
-        skills.style.display = ''
-        image.style.display = ''
-        links.style.display = ''
-        // Change the symbol in front of the title
-        this.childNodes[0].innerHTML = "\u25be" + string.substr(1, string.length)
-      }
-    };
     projectItem.appendChild(titleDiv)
     // H3 type
     var title = document.createElement("h2")
     titleDiv.appendChild(title)
+    titleDiv.className = "title"
+    titleDiv.style.display = 'none'
     // Actual text
-    var titleText = document.createTextNode("\u25b8 " + GLOBAL.projects[i]["Title"])
+    var titleText = document.createTextNode(GLOBAL.projects[i]["Title"])
     title.appendChild(titleText);
 
-
+    var infoDiv = document.createElement("div")
+    infoDiv.className = "info"
+    projectItem.appendChild(infoDiv)
 
     // Create and add the text to the div
     // Wrapper div
     var descriptionDiv = document.createElement("div")
     descriptionDiv.className = "description"
-    projectItem.appendChild(descriptionDiv)
+    infoDiv.appendChild(descriptionDiv)
     // p type
     var description = document.createElement("p")
     descriptionDiv.appendChild(description)
@@ -104,7 +84,7 @@ function fillPortfolio(data)
     var date = GLOBAL.projects[i]["Date"]
     var skillsDiv = document.createElement("div")
     skillsDiv.className = "skills"
-    projectItem.appendChild(skillsDiv)
+    infoDiv.appendChild(skillsDiv)
     // p type
     if (date != '')
     {
@@ -132,7 +112,7 @@ function fillPortfolio(data)
     var collabText = GLOBAL.projects[i]["Collaborators"]
     var linksDiv = document.createElement("div")
     linksDiv.className = "links"
-    projectItem.appendChild(linksDiv)
+    infoDiv.appendChild(linksDiv)
     // p type
     var linksp = document.createElement("p")
     linksDiv.appendChild(linksp)
@@ -158,14 +138,9 @@ function fillPortfolio(data)
     }
     if (collabText != '')
     {
-        // var collab = document.createElement("div")
-        // collab.className = "collab"
-        // linksp.appendChild(collab)
         var links = document.createElement("a")
         linksp.appendChild(links)
-        // links.href = "#"
         links.setAttribute('class', 'collab');
-        // links.target = "_blank"
         // Actual text
         var websiteText = document.createTextNode(collabText)
         links.appendChild(websiteText);
@@ -179,26 +154,156 @@ function fillPortfolio(data)
     var imageDiv = document.createElement("div")
     imageDiv.className = "image"
     projectItem.appendChild(imageDiv)
-    // center
-    var center = document.createElement("center")
-    imageDiv.appendChild(center)
-    // image
     if (GLOBAL.projects[i]["Photo"] != '')
     {
         var image = document.createElement("img")
         var imageFilename = "images/" + GLOBAL.projects[i]["Photo"]
         image.src = imageFilename
-        image.setAttribute('height', '400px');
-        image.style.margin = "0 auto";
-        center.appendChild(image)
+        image.setAttribute('height', '300px');
+        image.style.margin = "0 0";
+        image.style.display = "block"
+        image.className = "imageTag"
+        imageDiv.appendChild(image)
+        var hoverTextDiv = document.createElement("p")
+        imageDiv.appendChild(hoverTextDiv)
+        var hoverText = document.createTextNode(GLOBAL.projects[i]["Title"])
+        hoverTextDiv.style.position = "absolute"
+        hoverTextDiv.style.fontSize = "1.5em"
+        hoverTextDiv.style.fontWeight = "900"
+        hoverTextDiv.style.color = "white"
+        hoverTextDiv.style.textAlign = "center";
+        hoverTextDiv.style.verticalAlign = "middle";
+        hoverTextDiv.style.top = "calc(50% - 0.75em)"; // - half of text height
+        hoverTextDiv.style.left = "0";
+        hoverTextDiv.style.right = "0";
+        hoverTextDiv.style.margin = "auto";
+        hoverTextDiv.style.display = "none";
+        hoverTextDiv.className = "hoverTitle";
+        if (GLOBAL.projects[i]["WhiteBackground"] == 1){
+            image.className += " whiteBackground"
+            image.style.opacity = "0.97"
+        }
+        
+        hoverTextDiv.appendChild(hoverText);
+        imageDiv.onmouseover = function(d)
+        {
+            image = d.target.parentElement.getElementsByClassName("imageTag")[0]
+            image.style.opacity = "0.5";
+            hoverTextDiv = d.target.parentElement.getElementsByClassName("hoverTitle")[0]
+            hoverTextDiv.style.display = ''
+        }
+        imageDiv.onmouseout = function(d)
+        {
+            image = d.target.parentElement.getElementsByClassName("imageTag")[0]
+            if (image.className.indexOf("whiteBackground") != -1){
+                image.style.opacity = "0.97";
+            } else{
+                image.style.opacity = "1";
+            }
+            
+            hoverTextDiv = d.target.parentElement.getElementsByClassName("hoverTitle")[0]
+            hoverTextDiv.style.display = 'none'
+        }
     }
-    // hide the description to start with
-    imageDiv.style.display = 'none'
+
+    // When the title is clicked, toggle the question
+    imageDiv.onclick = function (d) {
+      var project = d.target.parentElement.parentElement
+      var title = project.getElementsByClassName("title")[0]
+      var text = project.getElementsByClassName("description")[0]
+      var skills = project.getElementsByClassName("skills")[0]
+      var image = project.getElementsByClassName("image")[0]
+      var links = project.getElementsByClassName("links")[0]
+      // if you want to hide the info
+      if (text.style.display != 'none')
+      {
+        title.style.display = 'none'
+        text.style.display = 'none'
+        skills.style.display = 'none'
+        links.style.display = 'none'
+        project.style.margin = "0px 5px"
+        project.style.padding = ""
+        image.childNodes[0].setAttribute('height', '300px');
+        image.childNodes[0].setAttribute('width', '');
+        image.style.width = "";
+        smoothScrollFast(project)
+      }
+      // if you want to show info
+      else
+      {
+        title.style.display = ''
+        text.style.display = ''
+        skills.style.display = ''
+        links.style.display = ''
+        project.style.margin = "0px 5px 8px 5px"
+        project.style.padding = "0px 5px 20px 5px"
+        image.childNodes[0].setAttribute('height', '');
+        image.style.width ='40%';
+        image.childNodes[0].setAttribute('width', '100%');
+
+        // scroll
+        smoothScroll(project)
+      }
+
+    };
   }
 }
 
-// $(document).ready(function(){
-//     $('.title').click(function(){
-//         $(this).siblings('.description').slideToggle();
-//     });
-// });
+
+function scrollTo(element, to, duration) {
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+}
+
+function smoothScroll(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 25) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+function smoothScrollFast(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 35) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 4);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}

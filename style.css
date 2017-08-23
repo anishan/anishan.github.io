@@ -3,12 +3,10 @@
 /*colors:
     light blue: 39A5B7
     dark blue: 2a7a89
-    light brown: b75838
-    dark brown: 753824
+    light brown: 888888
+    dark brown: 777777
     yellow: e6a800
     */
-
-
 
 .nav ul {
     font-family: "Raleway", "Century Gothic", sans-serif;
@@ -35,57 +33,55 @@
 }
 
 .footer li {
-	/*display: inline;*/
-    /*padding: 0 5px;*/
     color:#2a7a89;
 }
 
 h1 {
 	font-family: "Raleway", "Century Gothic", sans-serif;
-	font-size: 2.5em; /*relative size, allows resizing in browser*/
+	font-size: 2.5em; 
 	margin: 5px 0;
     color:#39A5B7;
 }
 
 h2 {
 	font-family: "Raleway", "Century Gothic", sans-serif;
-	font-size: 1.5em; /*relative size, allows resizing in browser*/
+	font-size: 1.5em;
 	margin: 15px 5px 0 0;
-    color:#b75838;
+    color:#2a7a89;
 }
 
 h3 {
 	font-family: "Raleway", "Century Gothic", sans-serif;
-	font-size: 1.25em; /*relative size, allows resizing in browser*/
+	font-size: 1.25em;
 	margin: 5px 0;
-    color:#b75838;
+    color:#2a7a89;
 }
 
 p {
 	font-family: "Raleway", "Century Gothic", sans-serif;
-	font-size: 1.2em; /*relative size, allows resizing in browser*/
+	font-size: 1.2em; 
 	margin: 5px 0;
-    color:#753824;
+    color:#666666;
 }
 
 #about p {
 	font-family: "Raleway", "Century Gothic", sans-serif;
-	font-size: 1.5em; /*relative size, allows resizing in browser*/
+	font-size: 1.5em;
 	margin: 5px 0;
-    color:#753824;
+    color:#666666;
 }
 
 .main-body a:link, .main-body a:visited {
-	color:#b75838;
+	color:#39A5B7;
 	text-decoration: none;
 }
 
 .main-body a:hover, .main-body a:active {
-    color: #e6a800;
+    color: #88888888;
 }
 
 a.collab:hover,  a.collab:active {
-    color: #753824;
+    color: #666666;
 }
 
 .nav a:link, .nav a:visited, .footer a:link, .footer a:visited {
@@ -102,10 +98,6 @@ a.collab:hover,  a.collab:active {
 	text-decoration: none;
 }
 
-.title h2:hover, .title h2:active {
-    color: #e6a800;
-}
-
 header {
 	margin: 25px;
 	text-align: left;
@@ -116,25 +108,11 @@ section {
 	text-align: left;
 }
 
-.description, .skills {
-    padding: 0 30px 0 30px;
-}
-
-.links {
-    padding: 0 30px 15px 30px;
-}
-
 /*For footer at bottom of page, some code from http://codepen.io/cbracco/pen/zekgx */
 
 html {
   height: 100%;
   box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
 
 body {
@@ -154,4 +132,26 @@ body {
   border-width: 2px 0 0 0;
   border-color: #2a7a89;
   text-align: center;
+}
+
+
+.project_item {
+  display: inline-block;
+  margin: 2px 5px; /*the bottom has some built in padding, I can't figure it out*/
+  box-sizing:border-box;
+  background: #eeeeee
+}
+
+
+
+.info {
+    position: relative;
+    width: 50%; 
+    float: left; /*To get them next to each other if all else fails*/
+}
+
+.image {
+    position: relative;
+    float: left; /*To get them next to each other if all else fails*/
+    background: black;
 }

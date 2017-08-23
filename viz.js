@@ -85,13 +85,13 @@ function drawTriangle2(topx, topy, leftx, lefty, rightx, righty)
 function exploreText()
 {
   console.log("in text");
-    var svg = d3.select("body").select("#main");
-    console.log(svg);
-    svg.append("text")
-        .attr("text", "Explore")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "20px")
-        .attr("fill", "black")
-        .attr("x", side/2)
-        .attr("y", side/2)
+  var svg = d3.select("body").select("#main");
+  console.log(svg);
+  svg.append("text")
+      .attr("text", "Explore")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "20px")
+      .attr("fill", "black")
+      .attr("x", side/2)
+      .attr("y", side/2)
 }
