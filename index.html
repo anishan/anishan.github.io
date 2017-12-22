@@ -1,57 +1,329 @@
-<!-- HTML for website portfolio home page -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Anisha Nakagawa</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-    <script src="viz.js"></script>
-</head>
+	<head>
+		<title>Anisha Nakagawa</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-<body>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-	<!-- NAVIGATION BAR -->
-	<nav>
-		<div class="nav">
-			<ul>
-				<li id="selected"><a href="index.html">ABOUT</a></li>
-				<li> | </li>
-				<li><a href="portfolio.html">PORTFOLIO</a></li>
-				<li> | </li>
-				<li><a href="images/Nakagawa_Anisha_Resume.pdf" target="_blank">RESUME</a></li>
-			</ul>
-		</div>
-	</nav>
+				<!-- Banner -->
+				<section class="banner style5 orient-center content-align-center image-position-center fullscreen onload-image-fade-in onload-content-fade-down">
+					<div class="content" style="background-color:white;opacity:0.8;">
+						<h1>Anisha Nakagawa</h1>
+						<p>Using electrical engineering, computing, and human-centered design </br>to create sustainable, resilient systems and empower people.<p>
+						<!-- <p>How can I help make society more sustainable, equitable, and resilient to the effects of climate change? Through my courses at <a href="http://www.olin.edu/" target="_blank">Olin College</a> and research at the <a href="http://cp.media.mit.edu/" target="_blank">Media Lab</a>, I have modeled transportation behavior, studied food systems, and co-designed with special needs educators. I'll be graduating Olin in December 2018 with a degree in electrical and computer engineering and experience in human-centered design. I plan to use my training as an engineer to change systems and empower people.</p> -->
+						<p class="major">Read <a href="#story">my story</a>, or view <a href="#portfolio">my work</a> and <a href="images/Nakagawa_Anisha_Resume.pdf" target="_blank">resume</a>. </p>
+						<!-- <ul class="actions vertical">
+							<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+						</ul> -->
+					</div>
+					<div class="image">
+						<img src="images/life_ideation.jpg" alt="Lifelong Ideation, in progress: ideas, design principles, and burning questions."/>
+					</div>
+				</section>
 
-	<!-- HEADER -->
-	<header>
-		<h1>Anisha Nakagawa</h1>
-	</header>
+				<!-- Portfolio -->
+				<section class="wrapper style1 align-center" id="portfolio">
+					<div class="inner">
+						<h2>Portfolio</h2>
+						<p>How can I help make society more sustainable, equitable, and resilient to the effects of climate change? Through my courses at <a href="http://www.olin.edu/" target="_blank">Olin College</a> and research at the <a href="http://cp.media.mit.edu/" target="_blank">Media Lab</a>, I strive to work in the overlapping space of engineering, design, and society. My most meaningful projects are highlighted below, followed by a larger collection of my work. </p>
+					</div>
+				</section>
 
-  <!-- MAIN CONTENT -->
-	<section>
-		<div class="main-body">
-			<img src="images/life_ideation.jpg" alt="Interests, Design Principles, and Questions" style="width:100%;max-width: 1000px;display: block;margin: 0 auto;">
-			<div id="about">
-			<p>How can I help make society more sustainable, equitable, and resilient to the effects of climate change? Through my courses at <a href="http://www.olin.edu/" target="_blank">Olin College</a> and research at the <a href="http://cp.media.mit.edu/" target="_blank">Media Lab</a>, I have modeled transportation behavior, studied food systems, and co-designed with special needs educators. I'll be graduating Olin in December 2018 with a degree in electrical and computer engineering and experience in human-centered design. I plan to use my training as an engineer to change systems and empower people.</p>
-			<p><a href="mailto:anisha.nakagawa@students.olin.edu">Email</a> is the best way to reach me. I'm also on <a href="https://github.com/anishan" target="_blank">github</a> and <a href="https://www.linkedin.com/in/anishanakagawa" target="_blank">linkedin</a>.</p></br>
+				<!-- Spotlight -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h2>Shifting Rhythms: Mobile Education Space</h2>
+						<p>I'm part of a team of college students and community partners in rural Mississippi, creating a mobile education space to teach technology, entrepreneurship, and arts to youth. We believe that by exercising creative expression, self-efficacy, and an entrepreneurial mindset, youth will develop the skills and confidence to create opportunities for themselves within and beyond their communities.</p>
+						<ul class="actions vertical">
+							<li><a href="https://shiftingrhythms.wixsite.com/shiftbus" target="_blank" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/shiftingrhythms.png" alt="Young man holding a diddley bow he created through the Shifting Rhythms program" />
+					</div>
+				</section>
 
-			<p> (pictured above) Lifelong Ideation, in progress: ideas, design principles, and burning questions.</p>
+				<!-- Spotlight -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Modelling Traffic in Hurricane Evacuations</h2>
+						<p>Through a summer research position at the MIT Media Lab, I created a model for traffic due to hurricane evacuations.</p>
+						<ul class="actions vertical">
+							<li><a href="images/Nakagawa_HurricaneEvacuationModel_MIT_IEEE.pdf" target="_blank" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/AgentsScreenshot.jpg" alt="Visualization of vehicles moving in a hurricane evacuation" />
+					</div>
+				</section>
+
+				<!-- Spotlight -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Transformative Classroom Experiences</h2>
+						<p>In my human-centered design course, we worked with special educators to re-design a classroom to enable individualized learning and normalize special needs. </p>
+						<ul class="actions vertical">
+							<li><a href="images/UOCD_poster.pdf" target="_blank" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/uocd.jpg" alt="Model of classroom design" />
+					</div>
+				</section>
+
+				<!-- Spotlight -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Smart Energy Microgrids to enable Renewable Energy</h2>
+						<p>I investigated how artificial intellience in smart batteries could complement renewable energy sources and stabilize energy use on the electric grid.</p>
+						<ul class="actions vertical">
+							<li><a href="images/introspective.pdf" target="_blank" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/introspective.jpg" alt="Stack of books with topics relevant to summer experience" />
+					</div>
+				</section>
+
+				<!-- Gallery -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>More Projects</h2>
+							<p>I've worked on a variety of projects to develop skills in math modeling, data visualization, electrical engineering, and design. Many of these examples use engineering in the context of social or environmental issues, while some others focus more on developing technical skills.</p>
+						</div>
+
+
+						<!-- Gallery -->
+							<div class="gallery style1 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images/gallery/fulls/Refugees-Screenshot.jpg" class="image">
+										<img src="images/gallery/thumbs/Refugees-Screenshot.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Refugees Data Visualization</h3>
+										<p>For our Data Visualization class, I worked with two people to create a visualization of refugees moving around the world over time. This was based off a dataset from the UN, and was drawn on a map using the GEOJson library in D3.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/NRMoptimized_us.png" class="image">
+										<img src="images/gallery/thumbs/NRMoptimized_us.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Optimizing the Carbon Footprints of Diets</h3>
+										<p>As an independent study, I studied different mathematical models for modeling resource use in the context of agriculture and food systems. My final project examined diets around the world, and how they can be optimized (within tolerances) to decrease the carbon footprint. I used sensitivity analysis to identify which changes had the largest impact.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/GentrificationMap.png" class="image">
+										<img src="images/gallery/thumbs/GentrificationMap.png" alt="" style="height:100%"/>
+									</a>
+									<div class="caption">
+										<h3>Modeling Gentrification with Discrete Math</h3>
+										<p>For our discrete math final project, we modelled gentrification in cities using k-means clustering, bayesian statistics, and machine learning techniques. e trained our model on data from the census and the American Community Survey to understand the likelihood of neighborhoods transitioning between different "gentrification states."</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/LazerMaze-Beams.jpg" class="image">
+										<img src="images/gallery/thumbs/LazerMaze-Beams.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Lazer Maze</h3>
+										<p>For a mechatronics course, my team created a laser maze experience where players attempt to navigate an obstacle course as quickly as possible without breaking the laser beams. Our project focused on integrating software, electrical, and mechanical systems. We created a web GUI for the game interface, which detected breaks in the moving laser beams through sensors connected to a raspberry pi.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/AGCBlockDiagram.jpg" class="image">
+										<img src="images/gallery/thumbs/AGCBlockDiagram.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Apollo Guidance Computer</h3>
+										<p>To learn about historical computer architecture, I worked with a classmate to create a simulation of the Apollo Guidance Computer in Verilog. We created the processor and memory based the specifications of the actual computer, and encoded functionality to execute a subset of the instruction set. We were able to run some of the original source code on our simulation.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/Draper-Map.jpg" class="image">
+										<img src="images/gallery/thumbs/Draper-Map.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Immersive Situational Awareness</h3>
+										<p>I worked with the human centered engineering group at Draper to design and develop an app for Google glass, as port of an immersive situational awareness research project. The app dynamically displayed visual cues, and was responsive as the user turned their head. I used human-centered design techniques to design the visual interface, and used Android programming to develop the Google Glass application.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/Aquaponics-Plants.jpg" class="image">
+										<img src="images/gallery/thumbs/Aquaponics-Plants.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Aquaponics</h3>
+										<p>I helped to start a new chapter of Net Impact by Design on campus, where we are promoting engineering build projects with a social or environmental impact. Our first project was building a small-scale aquaponics system to learn methods of growing food indoors. I helped lead the electrical subteam, and we worked on controlling the lights and water pump on a timer through a web application.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/NewsBias-ClimateMarch.png" class="image">
+										<img src="images/gallery/thumbs/NewsBias-ClimateMarch.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Bias in News Articles</h3>
+										<p>For my software design course, I created an algorithm to compare different news sources by analyzing the sentiment of articles. For a given event, the program finds the primary news articles about that event for different news companies. For three events, the State of the Union Address (Jan 2015), the People's Climate March in New York (Sept 2015), and the Keystone Pipeline Veto (Feb 2015), you can see trends in how different news companies report on certain topics.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/charcoal.png" class="image">
+										<img src="images/gallery/thumbs/charcoal.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Zambian Charcoal from Agricultural Waste</h3>
+										<p>We worked with a business-woman in Zambia who makes charcoal briquettes from agricultural waste, which reduces deforestation. Her briquettes would fall apart while burning, so we analyzed the material properties of samples of her charcoal in comparison to commercial charcoal, and used the tests to make recommendations for improving the briquettes.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/grow.png" class="image">
+										<img src="images/gallery/thumbs/grow.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>GROW Sustainability Club</h3>
+										<p>I'm co-leading the sustainability club at Olin. We worked with facilities to get drying racks in the laundry rooms, which lead to a noticeable decrease in dryer use and energy. We have also worked with the dining hall to introduce reusable travel cups, which has contributed to a 10-15% decrease in paper cup usage. I'm also part of the Sustainability Steering Committee, where I have worked with faculty and staff to create a Revolving Green Fund and evaluate sustainability at Olin.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/Wolves-TimeSeries.jpg" class="image">
+										<img src="images/gallery/thumbs/Wolves-TimeSeries.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Wolf Populations in Yellowstone</h3>
+										<p>In my Modeling and Simulation class, I modeled the effect of re-introducing wolves into the Yellowstone ecosystem through a conservation effort in 1995. I also modeling the subsequent changes in the elk and aspen species, as the wolves controlled the elk population, which allowed the aspen to recover. I also validated this model with data from the National Parks Service.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/ofdm.jpg" class="image">
+										<img src="images/gallery/thumbs/ofdm.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Orthogonal Frequency Division Multiplexing (OFDM)</h3>
+										<p>In a final project for our analog and digital communications class, I worked with two other students to implement OFDM on software radio peripherals.</p>
+										<!-- <ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul> -->
+									</div>
+								</article>
+							</div>
+
+					</section>
+
+				
+				<!-- My Story -->
+				<section class="wrapper style1 align-center" id="story">
+					<div class="inner">
+						<h2>My Story</h2>
+						<div class="index align-left">
+
+							<!-- Text -->
+							<section>
+								<!-- <header>
+									<h3>Text</h3>
+								</header> -->
+								<div class="content">
+									<p>My view of the world and goals for the future were shaped starting in elementary school. I went to the Haggerty School in Cambridge, MA, an inclusion-based public school where I had classes with people from around the world with a range of mental, physical, and academic abilities. In first grade, I had weekly play-dates with my classmate Michaela. We played on her backyard trampoline and ate sweet potato fries; her severe autism never interfered with our play. Growing up, it seemed to be a simple truth that people came from a variety of backgrounds that provided unique strengths and contributed to a diverse, balanced community. And so it felt deeply unfair to realize that people like my classmates with different needs and backgrounds are excluded from systems that should benefit everyone.</p>
+
+									<h3>I want to work in issues of justice, because the circumstances that someone is born into should not exclude them from basic rights and opportunities. </h3>
+
+									<p>My interest in environmental justice, in particular, coincided with a couple concurrent realizations. The house where I grew up is in a flood plain, and we experience flooding in storms with heavy rainfall. It’s gotten worse in recent years due to climate change, and our neighborhood has become increasingly at risk for very bad damage during big storms and hurricanes. But during city council hearings and neighborhood action groups, addressing these issues is never a high enough priority to prompt significant action or changes in policies.  </p>
+
+									<p>This follows the same pattern of other environmental issues in Boston and other parts of the world. The people most at risk – both in my neighborhood and in the global community - are people without the types of resources needed to recover after these events. I’d like to continue working in the area of environmental and social issues through my career, using my electrical and computer engineering skills and design experience where they can help.</p>
+
+									<h3>My vision is to apply my design and engineering background to address issues of environmental justice, by focusing on interdisciplinary, community-driven solutions.</h3>
+
+
+									<p>Can computing help understand how complex systems effect people? I spent time at the MIT Media Lab working on modelling traffic during hurricane evacuations to help understand how all people, especially vulnerable populations, might be impacted by severe weather events. I’m intrigued by the potential for modeling and computing to provide insights to these systems, to help guide improvements and policy interventions. I think it is critical to include community voices through this entire process.</p>
+
+									<p>How do you engage and empower communities with respect and humility? Through my project in community development in rural Mississippi, I’ve learned about the intricacies of navigating a context completely different from my own by listening and learning from stakeholders and local leaders. Our team works closely with respected community members so that this is truly a community-driven project. We practice human-centered design through respect and genuine curiosity to constantly improve our understanding of the needs and values of the entire community. This is the approach I want to use throughout all the work I will do.</p>
+
+									<h3>I believe that listening and truly caring has the power to change systems and help people. I plan to spend the rest of my life doing so.</h3>
+
+									<!-- <p>A written, cohesive story that ties together all my projects will go here. This is my GCSP reflection.</p>
+									<p>Some thoughts:</p>
+									<ul>
+										<li>Haggerty School and Inclusion (UOCD Special Education)</li>
+										<li>Environmental Justice in Systems (GROW + Media Lab)</li>
+										<li>Community-based development (ADE)</li>
+									</ul>
+ -->								</div>
+							</section>
+
+						</div>
+					</div>
+				</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Contact Me</h2></br>
+							<div class="content">
+								<h3><a href="mailto:anisha.nakagawa@students.olin.edu">Email</a> is the best way to reach me. I'm also on <a href="https://github.com/anishan" target="_blank">github</a> and <a href="https://www.linkedin.com/in/anishanakagawa" target="_blank">linkedin</a>.</h3>
+							</div>
+							<p><a href="mailto:anisha.nakagawa@students.olin.edu">anisha.nakagawa@students.olin.edu</a> | <a href="https://github.com/anishan" target="_blank">github.com/anishan</a> | <a href="https://www.linkedin.com/in/anishanakagawa" target="_blank">linkedin.com/in/anishanakagawa</a></p>
+							<p style="color:grey">Design: <a href="https://html5up.net" target="_blank" style="color:grey">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
 			</div>
-		</div>
-	</section>
 
-  <!-- FOOTER -->
-	<footer>
-    <div class="footer">
-			<ul>
-		  	<li><a href="mailto:anisha.nakagawa@students.olin.edu">anisha.nakagawa@students.olin.edu</a></li>
-			<!-- <li> | </li> -->
-			<li><a href="https://github.com/anishan">github.com/anishan</a></li>
-			<!-- <li> | </li> -->
-			<li><a href="https://www.linkedin.com/in/anishanakagawa">linkedin.com/in/anishanakagawa</a></li>
-			</ul>
-	</footer>
-</body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+
+	</body>
 </html>
