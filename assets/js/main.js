@@ -256,6 +256,8 @@
 							event.preventDefault();
 							event.stopPropagation();
 
+
+
 						// Locked? Bail.
 							if ($modal[0]._locked)
 								return;
@@ -279,6 +281,7 @@
 									$modal[0]._locked = false;
 
 							}, 600);
+
 
 					})
 					.on('click', '.modal', function(event) {
@@ -321,6 +324,8 @@
 								}, 475);
 
 							}, 125);
+
+						
 
 					})
 					.on('keypress', '.modal', function(event) {
